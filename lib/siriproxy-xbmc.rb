@@ -47,7 +47,7 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
-  listen_for /pause video/ do
+  listen_for /Pause video/ do
     system("curl http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=pause")
     say "video has been paused"
     request_completed
