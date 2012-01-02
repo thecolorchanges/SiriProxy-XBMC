@@ -21,6 +21,10 @@
 require 'cora'
 require 'siri_objects'
 require 'xbmc_library'
+require 'uri'
+require 'open-uri'
+require 'yaml'
+require 'pp'
 
 #######
 # This is plugin to control XBMC
@@ -36,7 +40,9 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
     password = config["xbmc_password"]
     @xbmc_library = XBMCLibrary.new(host, port, username, password, appname)
   end
-
+  
+  def volume_lvl
+      address = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
   #show plugin status
   listen_for /[xX] *[bB] *[mM] *[cC]/i do 
     if (@xbmc_library.load_api)
@@ -59,8 +65,6 @@ listen_for /Video resume/ do
     request_completed
     end
 listen_for /Video volume/ do
-     def volume_lvl
-      address = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
     say "The volume is: #{volume_lvl}"
     end
 
