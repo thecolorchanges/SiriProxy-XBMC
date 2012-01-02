@@ -61,6 +61,7 @@ listen_for /Video resume/ do
 listen_fo /Video volume/ do
     volume_lvl = system("curl http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()")
     say "The volume is: #{volume_lvl}"
+    end
 
   #play movie or episode (not working yet)
   listen_for /play (.*)/i do |title|
