@@ -42,7 +42,7 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
   end
   
   def volume_lvl
-     open('http://192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()'){ |f| print f.read }
+     open('http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()'){ |f| print f.read }
      end
      
   #show plugin status
