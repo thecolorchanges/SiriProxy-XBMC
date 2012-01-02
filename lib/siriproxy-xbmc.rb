@@ -53,7 +53,11 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
     request_completed
     end
     
-
+listen_for /Resume video/ do
+    system("curl http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=pause")
+    say "Resuming your video"
+    request_completed
+    end
 
   #play movie or episode (not working yet)
   listen_for /play (.*)/i do |title|
