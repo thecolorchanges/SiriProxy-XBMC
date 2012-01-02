@@ -58,7 +58,7 @@ listen_for /Video resume/ do
     say "Resuming your video"
     request_completed
     end
-listen_fo /Video volume/ do
+listen_for /Video volume/ do
     volume_lvl = system("curl http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()")
     say "The volume is: #{volume_lvl}"
     end
