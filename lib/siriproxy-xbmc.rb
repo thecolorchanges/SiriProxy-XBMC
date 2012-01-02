@@ -42,7 +42,7 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
   end
   
   def volume_lvl
-      address = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
+      adress = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
   #show plugin status
   listen_for /[xX] *[bB] *[mM] *[cC]/i do 
     if (@xbmc_library.load_api)
