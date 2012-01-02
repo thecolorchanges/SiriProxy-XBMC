@@ -59,7 +59,8 @@ listen_for /Video resume/ do
     request_completed
     end
 listen_for /Video volume/ do
-    volume_lvl = system("curl http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()")
+     def volume_lvl
+      address = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
     say "The volume is: #{volume_lvl}"
     end
 
