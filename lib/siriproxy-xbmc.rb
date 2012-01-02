@@ -66,9 +66,6 @@ listen_for /Video resume/ do
     say "Resuming your video"
     request_completed
     end
-listen_for /Video volume/ do
-    say "The volume is: #{volume_lvl}"
-    end
 
   #play movie or episode (not working yet)
   listen_for /play (.*)/i do |title|
