@@ -42,7 +42,9 @@ class SiriProxy::Plugin::XBMC < SiriProxy::Plugin
   end
   
   def volume_lvl
-      adress = http://xbmc:xbmc@192.168.1.10/xbmcCmds/xbmcHttp?command=Getvolume()
+     open('http://www.fincher.org/Misc/Pennies'){ |f| print f.read }
+     end
+     
   #show plugin status
   listen_for /[xX] *[bB] *[mM] *[cC]/i do 
     if (@xbmc_library.load_api)
